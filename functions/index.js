@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
   res.send('App is running..');
 });
 
-router.get('/login', (req, res) => {
+app.get('/login', (req, res) => {
   res.send('<h1>Please Login</h1>');
 });
 
