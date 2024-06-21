@@ -24,8 +24,6 @@
 //   console.log(`Example app listening on port ${port}`);
 // });
 
-require('dotenv').config()
-const PORT_NO = process.env.PORT
 const express = require('express');
 const serverless = require('serverless-http');
 const app = express();
@@ -70,7 +68,3 @@ router.get('/demo', (req, res) => {
 
 app.use('/.netlify/functions/api', router);
 module.exports.handler = serverless(app);
-
-app.listen(PORT_NO, () => {
-  console.log(`Example app listening on port ${port}`);
-});
