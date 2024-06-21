@@ -36,6 +36,10 @@ router.get('/', (req, res) => {
   res.send('App is running..');
 });
 
+router.get('/login', (req, res) => {
+  res.send('<h1>Please Login</h1>');
+});
+
 router.post('/add', (req, res) => {
   res.send('New record added.');
 });
