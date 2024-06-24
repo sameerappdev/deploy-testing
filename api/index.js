@@ -20,6 +20,12 @@ app.get("/youtube", (req, res) => {
   res.send("<h2>Youtube</h2>");
 });
 
+app.get("/greet", (req, res) => { 
+  // get the passed query 
+  const { name } = req.query; 
+  res.send({ msg: `Welcome ${name}!` }); 
+}); 
+
 app.get("/demo", (req, res) => {
   res.json([
     {
